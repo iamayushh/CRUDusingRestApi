@@ -23,4 +23,17 @@ public interface UserRepository extends CrudRepository<Employee,Integer>
 	//findByAgeGraeterThanEqualTo(int age);
 	//findByAgeIn(Collection of IOnteger);
 	//findByNameOrderByName(tring name);
+	
+	              
+	/* <-----------------Custom Query------------->
+           How to write custom querry
+	@Querry---->JPQL AND SQL
+	 Querry(Select * from user)
+	public List<Employee> GetallEmployee(String name);
+	Parametersized cutom querry
+	
+	
+	@Querry("Select * from user u where u.name:n")
+	public List<Employee> getUserByName(@Param("n") String name)
+	*/
 } 
